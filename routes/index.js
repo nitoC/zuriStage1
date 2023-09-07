@@ -22,7 +22,7 @@ router.get("/api", (req, res) => {
   return res.json({
       slack_name: slack_name ? slack_name : "not specified",
       current_day: day,
-      utc_time: new Date().toISOString(),
+      utc_time: ((new Date().toISOString()).slice(0,-5)+"z"),
       track: track ? track : "not specified",
       github_file_url: "https://github.com/nitoC/zuriStage1/blob/master/index.js",
       github_repo_url: "https://github.com/nitoC/zuriStage1",
