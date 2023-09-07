@@ -17,10 +17,10 @@ router.get("/api", (req, res) => {
 
   let day = weekday[date.getDay()];
 
-  const { track, slack } = req.query;
+  const { track, slack_name } = req.query;
 
   return res.json({
-      slack_name: slack ? slack : "not specified",
+      slack_name: slack_name ? slack_name : "not specified",
       current_day: day,
       utc_time: new Date().toISOString(),
       track: track ? track : "not specified",
