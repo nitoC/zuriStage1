@@ -5,8 +5,7 @@ const createUserTable = async () => {
     const createTableQuery = `
       CREATE TABLE IF NOT EXISTS users (
         id BIGSERIAL PRIMARY KEY,
-        name VARCHAR(255) UNIQUE NOT NULL,
-        age INT
+        name VARCHAR(255) UNIQUE NOT NULL
       );
     `;
     try {

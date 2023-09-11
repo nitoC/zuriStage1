@@ -1,11 +1,12 @@
 import pool from "../db/config.js";
 
-const postuser = async (name, age)=>{
+const postuser = async (name)=>{
 let result;
 try{
-    result = await pool.query(`INSERT INTO users(name, age) VALUES($1,$2)`,[name,age])
+    result = await pool.query(`INSERT INTO users(name) VALUES($1)`,[name])
 }catch(err){
     console.log(err,"postuser")
+    result.json("oops something happened")
 }
 return result
 }

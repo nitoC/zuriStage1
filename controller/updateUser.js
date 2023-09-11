@@ -3,15 +3,15 @@ import updateuserById from '../utils/updateuserById.js';
 
 const updateUser = async (req,res)=>{
     const {param} = req.params;
-    const {name, age} = req.body;
+    const {name} = req.body;
  let result;
  try{
      if(typeof parseInt(param) === "number" && isNaN(parseInt(param))===false){
         console.log(typeof parseInt(param));
         console.log(parseInt(param))
-    result = await updateuserById(name.trim(), age.trim(), param.trim());
+    result = await updateuserById(name.trim(), param.trim());
      }else{
-        result = await updateuserByName(name.trim(), age.trim(), param.trim());
+        result = await updateuserByName(name.trim(), param.trim());
      }
 console.log(result)
  }catch(err){
