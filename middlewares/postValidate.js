@@ -5,7 +5,7 @@ import schema  from "../model/postValidate.js";
  let validName;
 
  console.log(isNaN(parseInt(name))=== true)
- if(isNaN(parseInt(name)) === false){
+ if(isNaN(parseInt(name)) === false){// check if name is a number
     validName = parseInt(name);
     return res.json({status: 403, message:"name cannot be a number"})
  }else{

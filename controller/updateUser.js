@@ -6,12 +6,12 @@ const updateUser = async (req,res)=>{
     const {name} = req.body;
  let result;
  try{
-     if(typeof parseInt(param) === "number" && isNaN(parseInt(param))===false){
+     if(typeof parseInt(param) === "number" && isNaN(parseInt(param))===false){// checks if parameter is number and not a NaN
         console.log(typeof parseInt(param));
         console.log(parseInt(param))
-    result = await updateuserById(name.trim(), param.trim());
+    result = await updateuserById(name.trim().toLowerCase(), param.trim().toLowerCase());
      }else{
-        result = await updateuserByName(name.trim(), param.trim());
+        result = await updateuserByName(name.trim().toLowerCase(), param.trim().toLowerCase());
      }
 console.log(result)
  }catch(err){
@@ -20,7 +20,7 @@ console.log(result)
  if(typeof result === "string"){
    res.json(result);
 }else{
-   res.json({message:"success", status:200});
+   res.json({message:"success", status:204});
 }
 }
 

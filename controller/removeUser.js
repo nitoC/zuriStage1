@@ -5,12 +5,11 @@ const removeUser = async (req,res)=>{
     const {param} = req.params;
     let result;
     try{
-        if(typeof parseInt(param) === "number" && isNaN(parseInt(param))===false){
-           console.log(typeof parseInt(param));
-           console.log(parseInt(param))
-       result = await removeuserById(param.trim());
+        if(typeof parseInt(param) === "number" && isNaN(parseInt(param))===false){// check is parameter is a number and not a NaN
+      
+       result = await removeuserById(param.trim().toLowerCase());
         }else{
-           result = await removeuserByName(param.trim());
+           result = await removeuserByName(param.trim().toLowerCase());
         }
    console.log(result)
     }catch(err){
@@ -20,7 +19,7 @@ const removeUser = async (req,res)=>{
     if(typeof result === "string"){
          return  res.json(result);
     }else{
-          return res.json({message:"success", status:202});
+          return res.json({message:"success", status:204});
     }
 }
 

@@ -13,7 +13,7 @@ const Users = async (req,res)=>{
         console.log(err);
       }
  console.log("in users");
- res.json(users)
+ res.json({message:"success", status:200, payload:users })
 }
 
 export default Users;
