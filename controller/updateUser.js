@@ -9,9 +9,9 @@ const updateUser = async (req,res)=>{
      if(typeof parseInt(param) === "number" && isNaN(parseInt(param))===false){
         console.log(typeof parseInt(param));
         console.log(parseInt(param))
-    result = await updateuserById(name, age, param);
+    result = await updateuserById(name.trim(), age.trim(), param.trim());
      }else{
-        result = await updateuserByName(name, age, param);
+        result = await updateuserByName(name.trim(), age.trim(), param.trim());
      }
 console.log(result)
  }catch(err){

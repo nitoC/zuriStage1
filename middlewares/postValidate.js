@@ -5,7 +5,9 @@ import schema  from "../utils/postValidate.js";
  let value;
 
 if(req.body){
-    console.log("post validate")
+    console.log(name.length)
+    console.log(name.trim().length)
+
     console.log(name.trim(), age.trim())
     try {
          value = await schema.validateAsync({name: name.trim(), age:age.trim() });
