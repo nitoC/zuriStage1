@@ -209,6 +209,7 @@ The project follows a modular folder structure to keep the code organized:
 
 ## 5. Database Structure / UML Diagram
 - UML diagram
+**The UML diagram can be found in the assetes folder assets/backend.jpg or as a draw.io file in the root folder**
 ![UML image](./assets/backend.jpg)
 
 
