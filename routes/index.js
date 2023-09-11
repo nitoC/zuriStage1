@@ -14,8 +14,6 @@ router.get("/api/:param", user);
 router.patch("/api/:param",postValidate, updateUser);
 router.delete("/api/:param", removeUser);
 router.post("/api", postValidate, addUser);
-router.get("/",(req,res)=>{
-  res.json("home")
-})
+
 
 export default router;

@@ -67,7 +67,7 @@ status:201
 ```
 
 ### Update a Person
-**User_id can be name or id of the person/user in the database
+**User_id can be name or id of the person/user in the database**
 - **Endpoint:** `/api/:user_id`
 - **HTTP Method:** PATCH
 - **Request Format:**
@@ -91,7 +91,7 @@ status:204
 }
 ```
 ### Remove a Person
-**User_id can be name or id of the person/user in the database
+**User_id can be name or id of the person/user in the database**
 - **Endpoint:** `/api/:user_id`
 - **HTTP Method:** DELETE
 - **Request Format:**
@@ -227,7 +227,7 @@ The project follows a modular folder structure to keep the code organized:
 
 ## 8. GitHub Repository
 
--   The project is hosted on GitHub at [GitHub Repository Link](https://github.com/nitoc/).
+-   The project is hosted on GitHub at [GitHub Repository Link](https://github.com/nitoC/zuriStage1/tree/second-stage).
 
 ### Sample API Usage
 
