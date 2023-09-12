@@ -1,0 +1,16 @@
+import pool from "../db/config.js";
+
+const deleteUserByName = async (param) => {
+  let result;
+  try {
+    result = await pool.query(`DELETE FROM users WHERE name = $1`, [param]);
+  } catch (err) {
+    console.log(err);
+  }
+  if (result.rowCount > 0) {
+    return result.rows;
+  } else {
+    return "no such user";
+  }
+};
+export default deleteUserByName;
