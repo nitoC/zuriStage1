@@ -236,7 +236,7 @@ The project follows a modular folder structure to keep the code organized:
 
 ## 9. Hosting
 
--   visit the link to test out the hosted version of the api `[https://yourdomain.com/api](https://backendhng.onrender.com/api)`
+-   visit the link to test out the hosted version of the api [domain/api](https://backendhng.onrender.com/api)
 -   baseURL is https://backendhng.onrender.com
 ## 10. Known Limitations / assumptions
 
