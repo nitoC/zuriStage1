@@ -241,4 +241,4 @@ The project follows a modular folder structure to keep the code organized:
 ## 10. Known Limitations / assumptions
 
 -   The name "tolu emmanuel" is not the same as "tolu  emmanuel" (with an extra space  in between). The api makes provision to add first name and last name together seperated by a space but does not handle number of spaces. if the number of spaces separating them is not equal then matching won't take place when querying the database by name.
-- The user must have a unique name before saving can be done in the database or before creating a new person/user. This can be resolved by adding fullname consisiting of the firstname, middlename and lastname separated with spaces.
+- The user must have a unique name before saving can be done in the database or before creating a new person/user, this means that if a name has been registered in the database new users cannot use that same name to create new user/person. This can be resolved by adding fullname consisiting of the firstname, middlename or lastname separated with spaces.
