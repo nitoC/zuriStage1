@@ -236,7 +236,8 @@ The project follows a modular folder structure to keep the code organized:
 
 ## 9. Hosting
 
--   visit the link to test out the hosted version of the api `https://yourdomain.com/api`.
+-   visit the link to test out the hosted version of the api `https://backendhng.onrender.com/api/`
+-   base URL is https://backendhng.onrender.com
 ## 10. Known Limitations / assumptions
 
 -   The name "tolu emmanuel" is not the same as "tolu  emmanuel" (with an extra space  in between). The api makes provision to add first name and last name together seperated by a space but does not handle number of spaces. if the number of spaces separating them is not equal then matching won't take place when querying the database by name.

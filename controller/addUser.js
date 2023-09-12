@@ -17,6 +17,7 @@ const addUser = async (req, res) => {
     console.log(err);
     return res.status(500).json("oops! something went wrong");
   }
-  return res.json({ message: "success", status: 201 });
+  console.log(params)
+  return res.json({ message: "success", status: 201, user_id: name.trim().toLowerCase() });
 };
 export default addUser;

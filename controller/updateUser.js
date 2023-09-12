@@ -17,6 +17,7 @@ const updateUser = async (req, res) => {
         param.trim().toLowerCase()
       );
     } else {
+      console.log(name)
       result = await updateuserByName(
         name.trim().toLowerCase(),
         param.trim().toLowerCase()
@@ -29,7 +30,7 @@ const updateUser = async (req, res) => {
   if (typeof result === "string") {
     res.json(result);
   } else {
-    res.json({ message: "success", status: 204 });
+    res.json({ message: "success", status: 200, user_id:name.trim().toLowerCase() });
   }
 };
 
