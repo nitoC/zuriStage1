@@ -62,12 +62,13 @@ POST /api
 //response value
 {
 message:"success",
-status:201
+status:201,
+user_id:name
 }
 ```
 
 ### Update a Person
-**User_id can be name or id of the person/user in the database**
+**User_id can be name or id of the person/user in the database and both can be used to as params to find user**
 - **Endpoint:** `/api/:user_id`
 - **HTTP Method:** PATCH
 - **Request Format:**
@@ -87,11 +88,12 @@ PATCH/api/user_id
 //response value
 {
 message:"success",
-status:204
+status:200,
+user_id:name
 }
 ```
 ### Remove a Person
-**User_id can be name or id of the person/user in the database**
+**User_id can be name or id of the person/user in the database. Both can be used to query and search for user in database**
 - **Endpoint:** `/api/:user_id`
 - **HTTP Method:** DELETE
 - **Request Format:**
