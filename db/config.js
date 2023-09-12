@@ -6,12 +6,10 @@ const password = process.env.DBPASS;
 const port = process.env.DBPORT;
 
 const pool = new pg.Pool({
-  host: 'localhost',
-  database: 'hngbackend',
-  user: 'postgres',
-  password,
-  port,
-  max: 20
+  connectionString: process.env.DBConfigLink,
+  ssl: {
+      rejectUnauthorized: false
+  }
 })
 
 
