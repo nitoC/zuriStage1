@@ -5,7 +5,6 @@ import bodyParser from "body-parser";
 import createUserTable from "./model/userModel.js";
 
 dotenv.config();
-
 const Port = process.env.PORT||6000;
 
 const app = express();
