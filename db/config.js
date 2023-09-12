@@ -8,7 +8,7 @@ const port = process.env.DBPORT;
 const pool = new pg.Pool({
   host: 'localhost',
   database: process.env.DB,
-  user: USER,
+  user: process.env.USER,
   password,
   port,
   max: 20
