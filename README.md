@@ -51,7 +51,7 @@ This RESTful API allows you to perform CRUD operations on a "person" resource or
 **Sample Request:**
 
 ```json
-POST /api
+POST baseURL/api
 // request body below
 {
   "name": "John Doe"
@@ -77,7 +77,7 @@ status:201
 **Sample Request:**
 
 ```json
-PATCH/api/user_id
+PATCH baseURL/api/user_id
 {
   "name": "John Doe"
 }
@@ -100,7 +100,7 @@ status:204
 **Sample Request:**
 
 ```json
-DELETE/api/user_id
+DELETE baseURL/api/user_id
 {
   "name": "John Doe"
 }
@@ -125,7 +125,7 @@ status:204
 **Sample Request:**
 
 ```
-GET/api/user_id
+GET baseURL/api/user_id
 
 //below are examples of how the request URL should look
 
@@ -155,7 +155,7 @@ payload: user
 **Sample Request:**
 
 ```
-GET/api
+GET baseURL/api
 
 //below are examples of how the request URL should look
 
@@ -236,7 +236,7 @@ The project follows a modular folder structure to keep the code organized:
 
 ## 9. Hosting
 
--   visit the link to test out the hosted version of the api [domain/api](https://backendhng.onrender.com/api)
+-   visit the link to test out the hosted version of the api [baseURL/api](https://backendhng.onrender.com/api)
 -   baseURL is https://backendhng.onrender.com
 ## 10. Known Limitations / assumptions
 
