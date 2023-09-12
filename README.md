@@ -27,7 +27,7 @@
 This RESTful API allows you to perform CRUD operations on a "person" resource or "user" as named in this project. It interfaces with a PostgreSQL database and provides flexible parameter handling. The API follows industry best practices for security, including protection against common vulnerabilities like SQL injection by using Pg library. 
 
 ### NOTE 
-*** The pg library prevents SQL injections by allowing parameterized query or using parameters in the database query***
+*** The pg library prevents SQL injections by allowing parameterized query or using parameters in the database query ***
 
 ### Technologies Used
 
