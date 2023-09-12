@@ -27,7 +27,7 @@
 This RESTful API allows you to perform CRUD operations on a "person" resource or "user" as named in this project. It interfaces with a PostgreSQL database and provides flexible parameter handling. The API follows industry best practices for security, including protection against common vulnerabilities like SQL injection by using Pg library. 
 
 ### NOTE 
-*** The pg library prevents SQL injections by allowing parameterized query or using parameters in the database query***
+*** The pg library prevents SQL injections by allowing parameterized query or using parameters in the database query ***
 
 ### Technologies Used
 
@@ -51,7 +51,7 @@ This RESTful API allows you to perform CRUD operations on a "person" resource or
 **Sample Request:**
 
 ```json
-POST /api
+POST baseURL/api
 // request body below
 {
   "name": "John Doe"
@@ -77,7 +77,7 @@ status:201
 **Sample Request:**
 
 ```json
-PATCH/api/user_id
+PATCH baseURL/api/user_id
 {
   "name": "John Doe"
 }
@@ -100,7 +100,7 @@ status:204
 **Sample Request:**
 
 ```json
-DELETE/api/user_id
+DELETE baseURL/api/user_id
 {
   "name": "John Doe"
 }
@@ -125,7 +125,7 @@ status:204
 **Sample Request:**
 
 ```
-GET/api/user_id
+GET baseURL/api/user_id
 
 //below are examples of how the request URL should look
 
@@ -155,7 +155,7 @@ payload: user
 **Sample Request:**
 
 ```
-GET/api
+GET baseURL/api
 
 //below are examples of how the request URL should look
 
@@ -236,8 +236,9 @@ The project follows a modular folder structure to keep the code organized:
 
 ## 9. Hosting
 
--   visit the link to test out the hosted version of the api `https://yourdomain.com/api`.
+-   visit the link to test out the hosted version of the api [baseURL/api](https://backendhng.onrender.com/api)
+-   baseURL is https://backendhng.onrender.com
 ## 10. Known Limitations / assumptions
 
 -   The name "tolu emmanuel" is not the same as "tolu  emmanuel" (with an extra space  in between). The api makes provision to add first name and last name together seperated by a space but does not handle number of spaces. if the number of spaces separating them is not equal then matching won't take place when querying the database by name.
-- The user must have a unique name before saving can be done in the database, which can be resolved by adding fullname with the firstname, middlename and lastname separated with spaces.
+- The user must have a unique name before saving can be done in the database or before creating a new person/user, this means that if a name has been registered in the database new users cannot use that same name to create new user/person. This can be resolved by adding fullname consisiting of the firstname, middlename or lastname separated with spaces.
